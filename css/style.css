@@ -17,6 +17,7 @@ body {
   padding: 1rem;
 }
 .navbar {
+  padding: 0rem 2rem;
   background-color: red;
   display: flex;
   justify-content: space-between;
@@ -26,7 +27,7 @@ body {
 }
 
 .navbar .nav-logo {
-  padding: 2rem;
+  padding: 2rem 0rem;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 4rem;
@@ -151,14 +152,9 @@ body {
   align-items: center;
 }
 
-.menu-box {
-  padding: 3rem;
-  background-color: #202a54;
-}
-
 .img-menu {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 h1 {

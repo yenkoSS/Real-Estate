@@ -1,7 +1,7 @@
 const rowsList = document.querySelectorAll(".row");
 const headingSectionList = document.querySelectorAll(".heading-section");
 const iconClose = document.querySelector(".icon-close");
-const menuBtn = document.querySelector(".menu-box");
+const menuBtn = document.querySelector(".img-menu");
 const menu = document.querySelector(".nav-list-small");
 const navItemList = document.querySelectorAll(".nav-item");
 
