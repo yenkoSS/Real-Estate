@@ -16,15 +16,16 @@ html {
 body {
   padding: 1rem;
 }
-.navbar-expand {
+.navbar {
   background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #e9c474;
+  position: relative;
 }
 
-.navbar-expand .nav-logo {
+.navbar .nav-logo {
   padding: 2rem;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -33,7 +34,7 @@ body {
   color: #202a54;
 }
 
-.navbar-expand .nav-list {
+.navbar .nav-list {
   background-color: #202a54;
   list-style-type: none;
   font-family: "Montserrat", sans-serif;
@@ -47,9 +48,60 @@ body {
   height: inherit;
 }
 
-.navbar-expand .nav-list li a {
+.navbar .nav-list li a {
   text-decoration: none;
   color: white;
+}
+
+.nav-list-small {
+  padding: 4rem;
+  width: 90%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #202a54;
+  position: absolute;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  z-index: 1;
+  animation-name: slide-menu-in;
+  animation-duration: 200ms;
+}
+
+@keyframes slide-menu-in {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-list-small li a {
+  text-decoration: none;
+  color: #e9c474;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .section-homepage {
@@ -97,6 +149,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.menu-box {
+  padding: 3rem;
+  background-color: #202a54;
+}
+
+.img-menu {
+  width: 4rem;
+  height: 4rem;
 }
 
 h1 {
@@ -284,13 +346,8 @@ h4 {
 
 .img-gallery {
   width: 100%;
-  height: 250px;
+  height: 180px;
   background-position: center;
-  transition: 500ms;
-}
-
-.img-gallery:hover {
-  transform: translateY(-200px) scale(2);
 }
 
 .card-team {
@@ -402,6 +459,7 @@ footer {
   flex-direction: column;
   gap: 3rem;
 }
+
 .footer-nav-list li a {
   text-decoration: none;
   font-size: 1.6rem;
@@ -458,12 +516,12 @@ footer {
     flex-direction: row;
   }
 
-  .navbar-expand {
+  .navbar {
     position: relative;
     z-index: 1;
   }
 
-  .navbar-expand .nav-list {
+  .navbar .nav-list {
     display: flex;
     position: absolute;
     right: -4rem;
@@ -491,6 +549,17 @@ footer {
 
   .logo-footer {
     display: block;
+  }
+
+  .menu-box {
+    display: none;
+  }
+
+  .offset {
+    position: absolute;
+    top: 30px;
+    height: 100%;
+    width: 100%;
   }
 }
 
