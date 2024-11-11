@@ -9,18 +9,19 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 45%;
   scroll-behavior: smooth;
 }
 
+body {
+  padding: 1rem;
+}
 .navbar-expand {
   background-color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #e9c474;
-  position: relative;
-  z-index: 1;
 }
 
 .navbar-expand .nav-logo {
@@ -38,8 +39,6 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   padding: 2rem 4rem;
-  position: absolute;
-  right: -4rem;
   display: none;
   letter-spacing: 0.3rem;
   gap: 3rem;
@@ -55,10 +54,15 @@ html {
 
 .section-homepage {
   height: 95vh;
+  width: auto;
   position: relative;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .box-blue {
+  display: none;
   position: absolute;
   height: 100%;
   top: 0;
@@ -89,7 +93,7 @@ html {
       rgba(88, 88, 88, 0.637)
     ),
     url(../img/hero.jpg);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -97,7 +101,7 @@ html {
 
 h1 {
   font-family: "Montserrat";
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
   color: white;
   text-transform: uppercase;
@@ -105,7 +109,7 @@ h1 {
 }
 
 h1 span {
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 700;
   padding: 1rem;
   background-color: #e9c474;
@@ -113,7 +117,7 @@ h1 span {
 }
 
 h1 .second-span {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 700;
   padding: 1rem;
   background-color: #202a54;
@@ -126,7 +130,6 @@ h2 {
   font-weight: 500;
   color: white;
   margin-bottom: 40px;
-  width: 90%;
   text-align: left;
 }
 
@@ -164,9 +167,9 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-weight: 600;
-  transform: translateX(-400px);
+  transform: translateX(-100px);
   opacity: 0;
-  transition: 200ms;
+  transition: 300ms;
 }
 
 .heading-section span {
@@ -190,9 +193,8 @@ h4 {
 }
 
 .house-details-box {
-  border-top: 12px solid #202a54;
-  border-bottom: 12px solid #202a54;
-  border-radius: 5px;
+  border-top: 1.2rem solid #202a54;
+  border-bottom: 1.2rem solid #202a54;
   padding: 4rem 0;
   width: 90%;
   height: 100%;
@@ -218,11 +220,11 @@ h4 {
   padding: 1rem;
   background-color: #e9c474;
   border-radius: 4px;
-  height: 50px;
+  height: 5rem;
   margin-right: 30px;
   position: absolute;
-  top: 19px;
-  right: -48px;
+  top: 1.6rem;
+  right: -4.8rem;
 }
 
 .text-details-title {
@@ -254,7 +256,7 @@ h4 {
   row-gap: 3rem;
   transform: translateY(150px);
   opacity: 0.5;
-  transition: 400ms;
+  transition: 300ms;
 }
 
 .show-row {
@@ -262,7 +264,7 @@ h4 {
   opacity: 1;
 }
 
-.btn-gallery {
+.btn-more {
   padding: 1.6rem;
   border: 4px solid #e9c474;
   background-color: white;
@@ -307,8 +309,8 @@ h4 {
 .img-card-team {
   position: absolute;
   top: -50%;
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   border: 5px solid #e9c474;
   margin-bottom: 2rem;
@@ -321,7 +323,7 @@ h4 {
 }
 
 .icon-social-media {
-  width: 30px;
+  width: 3rem;
   height: auto;
 }
 
@@ -362,7 +364,8 @@ textarea::placeholder {
 }
 
 .form-title {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: #202a54;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
@@ -379,7 +382,7 @@ footer {
   background-color: #202a54;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -390,12 +393,13 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: gold;
+  display: none;
 }
 
 .footer-nav-list {
   list-style-type: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 3rem;
 }
 .footer-nav-list li a {
@@ -408,8 +412,8 @@ footer {
 }
 
 .icon-social-media-footer {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .footer-social-media {
@@ -421,9 +425,52 @@ footer {
   row-gap: 12rem;
 }
 
+.row-gap {
+  row-gap: 0;
+}
+
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  h1 span {
+    font-size: 3rem;
+  }
+
+  h1 .second-span {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (min-width: 992px) {
+  .row-gap {
+    row-gap: 3rem;
+  }
+
+  .footer-nav-list {
+    flex-direction: row;
+  }
+
+  .navbar-expand {
+    position: relative;
+    z-index: 1;
+  }
+
   .navbar-expand .nav-list {
     display: flex;
+    position: absolute;
+    right: -4rem;
+  }
+
+  .box-blue {
+    display: block;
   }
 
   .md-gap-12 {
@@ -433,8 +480,25 @@ footer {
   .row footer {
     flex-direction: row;
   }
+
+  .hero-background {
+    display: flex;
+  }
+
+  .section-homepage {
+    background-image: none;
+  }
+
+  .logo-footer {
+    display: block;
+  }
 }
 
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+}
 /* S P A C I N G   U T I L I T I E S */
 
 .mtop-10 {
