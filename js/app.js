@@ -4,6 +4,22 @@ const iconClose = document.querySelector(".icon-close");
 const menuBtn = document.querySelector(".img-menu");
 const menu = document.querySelector(".nav-list-small");
 const navItemList = document.querySelectorAll(".nav-item");
+const sectionVillasBounding = document
+  .querySelector(".section-villas")
+  .getBoundingClientRect();
+
+const navBarScroll = document.querySelector(".nav-list-scroll");
+
+window.addEventListener("scroll", () => {
+  if (
+    window.scrollY > sectionVillasBounding.top - 300 &&
+    window.innerWidth >= 992
+  ) {
+    navBarScroll.style.display = "flex";
+  } else if (window.scrollY < sectionVillasBounding.top) {
+    navBarScroll.style.display = "none";
+  }
+});
 
 const rowsOberver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

@@ -16,6 +16,7 @@ html {
 body {
   padding: 1rem;
 }
+
 .navbar {
   padding: 0rem 2rem;
   background-color: red;
@@ -50,6 +51,41 @@ body {
 }
 
 .navbar .nav-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .nav-list-scroll {
+  position: fixed;
+  display: none;
+  top: 5px;
+  right: 0;
+  width: 100%;
+  background-color: #202a54;
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  left: 0.3rem;
+  text-transform: uppercase;
+  justify-content: center;
+  gap: 3rem;
+  font-weight: 500;
+  animation-name: slide-nav-in;
+  animation-duration: 300ms;
+}
+
+@keyframes slide-nav-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar .nav-list-scroll li a {
   text-decoration: none;
   color: white;
 }
@@ -155,6 +191,7 @@ body {
 .img-menu {
   width: 5rem;
   height: 5rem;
+  display: block;
 }
 
 h1 {
@@ -556,6 +593,10 @@ footer {
     top: 30px;
     height: 100%;
     width: 100%;
+  }
+
+  .img-menu {
+    display: none;
   }
 }
 
